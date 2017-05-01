@@ -21,3 +21,7 @@ RUN add-apt-repository ppa:beineri/opt-qt562-xenial -y &&\
         qt56-meta-full
 
 RUN echo "source /opt/qt56/bin/qt56-env.sh" >> ~/.bashrc
+
+WORKDIR /home/root/
+
+CMD ["/bin/bash"]
