@@ -8,6 +8,7 @@ RUN sed -i 's/ universe/ universe multiverse/' /etc/apt/sources.list
 RUN apt update &&\
     apt upgrade -y &&\
     apt install -y \
+        git \
         software-properties-common \
         build-essential \
         libxcb1-dev     \
