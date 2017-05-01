@@ -21,3 +21,7 @@ RUN add-apt-repository ppa:beineri/opt-qt571-xenial -y &&\
         qt57-meta-full
 
 RUN echo "source /opt/qt57/bin/qt57-env.sh" >> ~/.bashrc
+
+WORKDIR /home/root/
+
+CMD ["/bin/bash"]
