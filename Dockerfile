@@ -17,6 +17,7 @@ RUN apt update &&\
 RUN add-apt-repository ppa:beineri/opt-qt551-trusty -y &&\
     apt update &&\
     apt install -y \
+        qt55-meta \
         qt55-meta-full
 
 RUN echo "source /opt/qt55/bin/qt55-env.sh" >> ~/.bashrc
