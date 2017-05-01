@@ -20,7 +20,12 @@ RUN add-apt-repository ppa:beineri/opt-qt562-xenial -y &&\
     apt install -y \
         qt56-meta-full
 
-RUN echo "source /opt/qt56/bin/qt56-env.sh" >> ~/.bashrc
+ENV QT_BASE_DIR=/opt/qt56
+ENV QTDIR=$QT_BASE_DIR
+ENV PATH=$QT_BASE_DIR/bin:$PATH
+ENV LD_LIBRARY_PATH=$QT_BASE_DIR/lib:$LD_LIBRARY_PATH
+ENV PKG_CONFIG_PATH=$QT_BASE_DIR/lib/pkgconfig:$PKG_CONFIG_PATH
+
 
 WORKDIR /home/root/
 
