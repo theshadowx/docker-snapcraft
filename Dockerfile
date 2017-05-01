@@ -14,9 +14,9 @@ RUN apt update &&\
         libx11-dev      \
         libgl1-mesa-dev
 
-RUN add-apt-repository ppa:beineri/opt-qt58-xenial -y &&\
+RUN add-apt-repository ppa:beineri/opt-qt562-xenial -y &&\
     apt update &&\
     apt install -y \
-        qt58-meta-full
+        qt56-meta-full
 
-RUN echo "source /opt/qt58/bin/qt58-env.sh" >> ~/.bashrc
+RUN echo "source /opt/qt56/bin/qt56-env.sh" >> ~/.bashrc
