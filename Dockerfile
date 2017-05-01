@@ -22,6 +22,8 @@ RUN add-apt-repository ppa:beineri/opt-qt58-xenial -y &&\
 
 RUN echo "source /opt/qt58/bin/qt58-env.sh" >> ~/.bashrc
 
+ENV PATH=/opt/qt58/bin/:$PATH
+
 WORKDIR /home/root/
 
 CMD ["/bin/bash"]
