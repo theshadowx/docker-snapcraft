@@ -13,12 +13,10 @@ RUN apt update &&\
         build-essential \
         libxcb1-dev     \
         libx11-dev      \
-        libgl1-mesa-dev
+        libgl1-mesa-dev \
+        qt5-default
 
-RUN add-apt-repository ppa:beineri/opt-qt551-trusty -y &&\
-    apt update &&\
-    apt install -y \
-        qt55-meta \
-        qt55-meta-full
 
-RUN echo "source /opt/qt55/bin/qt55-env.sh" >> ~/.bashrc
+WORKDIR /home/root/
+
+CMD ["/bin/bash"]
