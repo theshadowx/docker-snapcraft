@@ -21,3 +21,7 @@ RUN add-apt-repository ppa:beineri/opt-qt58-xenial -y &&\
         qt58-meta-full
 
 RUN echo "source /opt/qt58/bin/qt58-env.sh" >> ~/.bashrc
+
+WORKDIR /home/root/
+
+CMD ["/bin/bash"]
