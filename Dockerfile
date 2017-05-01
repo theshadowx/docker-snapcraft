@@ -20,7 +20,11 @@ RUN add-apt-repository ppa:beineri/opt-qt571-xenial -y &&\
     apt install -y \
         qt57-meta-full
 
-RUN echo "source /opt/qt57/bin/qt57-env.sh" >> ~/.bashrc
+ENV QT_BASE_DIR=/opt/qt57
+ENV QTDIR=$QT_BASE_DIR
+ENV PATH=$QT_BASE_DIR/bin:$PATH
+ENV LD_LIBRARY_PATH=$QT_BASE_DIR/lib:$LD_LIBRARY_PATH
+ENV PKG_CONFIG_PATH=$QT_BASE_DIR/lib/pkgconfig:$PKG_CONFIG_PATH
 
 WORKDIR /home/root/
 
