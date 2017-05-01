@@ -22,7 +22,11 @@ RUN add-apt-repository ppa:beineri/opt-qt58-xenial -y &&\
 
 RUN echo "source /opt/qt58/bin/qt58-env.sh" >> ~/.bashrc
 
-ENV PATH=/opt/qt58/bin/:$PATH
+ENV QT_BASE_DIR=/opt/qt58
+ENV QTDIR=$QT_BASE_DIR
+ENV PATH=$QT_BASE_DIR/bin:$PATH
+ENV LD_LIBRARY_PATH=$QT_BASE_DIR/lib:$LD_LIBRARY_PATH
+ENV PKG_CONFIG_PATH=$QT_BASE_DIR/lib/pkgconfig:$PKG_CONFIG_PATH
 
 WORKDIR /home/root/
 
