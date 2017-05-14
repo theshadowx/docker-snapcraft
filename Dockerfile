@@ -15,7 +15,11 @@ RUN apt update &&\
         libx11-dev      \
         libgl1-mesa-dev \
         qt5-default     \
-        qtbase5-private-dev
+        qtbase5-private-dev \
+        dh-make \
+        debhelper \
+        xvfb \
+        checkinstall
 
 
 WORKDIR /home/root/
