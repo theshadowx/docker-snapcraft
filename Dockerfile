@@ -14,7 +14,8 @@ RUN apt update &&\
         libxcb1-dev     \
         libx11-dev      \
         libgl1-mesa-dev \
-        qt5-default
+        qt5-default     \
+        qtbase5-private-dev
 
 
 WORKDIR /home/root/
