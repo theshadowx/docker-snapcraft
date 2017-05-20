@@ -19,7 +19,8 @@ RUN apt update &&\
         dh-make \
         debhelper \
         xvfb \
-        checkinstall
+        checkinstall \
+        wget
 
 
 WORKDIR /home/root/
