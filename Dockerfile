@@ -20,7 +20,8 @@ RUN apt update &&\
         debhelper \
         xvfb \
         checkinstall \
-        wget
+        wget \
+        fuse
 
 
 WORKDIR /home/root/
